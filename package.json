@@ -25,9 +25,9 @@
             "authors": "Bradley Methorst <contact@bradleymethorst.com>",
             "productName": "NordPass",
             "productDescription": "NordPass fix for RHEL9 based Operating Systems (like Rocky 9).",
-            "iconUrl": "https://github.com/DragonicDefson/NordPass-RHEL9-Fix/assets/icon.ico",
+            "iconUrl": "https://raw.githubusercontent.com/DragonicDefson/NordPass-RHEL9-Fix/main/assets/icon.ico",
             "setupIcon": "./assets/icon.ico",
-            "setupExe": "NordPass.exe"
+            "setupExe": "NordPassSetup.exe"
           }
         },
         {
