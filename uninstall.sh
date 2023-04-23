@@ -1,3 +1,5 @@
 #!/bin/bash
 
-dnf remove NordPass -y
+# REQUIRES ADDITIONAL TESTS. WILL UPDATE WHEN DONE.
+
+# dnf remove NordPass -y
