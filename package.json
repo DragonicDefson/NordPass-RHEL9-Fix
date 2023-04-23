@@ -1,0 +1,72 @@
+{
+  "name": "nordpass-rhel9-fix",
+  "version": "0.0.1",
+  "description": "NordPass fix for RHEL9 based Operating Systems (like Rocky 9).",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "install": "sudo bash ./install.sh",
+    "uninstall": "sudo bash ./uninstall.sh"
+  },
+  "author": "Bradley Methorst <contact@bradleymethorst.com>",
+  "license": "GPL-3.0",
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "icon": "./assets/icon.png"
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "title": "NordPass",
+            "authors": "Bradley Methorst <contact@bradleymethorst.com>",
+            "productName": "NordPass",
+            "productDescription": "NordPass fix for RHEL9 based Operating Systems (like Rocky 9).",
+            "iconUrl": "https://github.com/DragonicDefson/NordPass-RHEL9-Fix/assets/icon.ico",
+            "setupIcon": "./assets/icon.ico",
+            "setupExe": "NordPass.exe"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {
+            "authors": "Bradley Methorst <contact@bradleymethorst.com>",
+            "description": "NordPass fix for RHEL9 based Operating Systems (like Rocky 9).",
+            "options": {
+              "name": "NordPass",
+              "genericName": "NordPass",
+              "productName": "NordPass",
+              "productDescription": "NordPass fix for RHEL9 based Operating Systems (like Rocky 9).",
+              "icon": "./assets/icon.png"
+            }
+          }
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {
+            "authors": "Bradley Methorst <contact@bradleymethorst.com>",
+            "productDescription": "NordPass fix for RHEL9 based Operating Systems (like Rocky 9).",
+            "options": {
+              "name": "NordPass",
+              "genericName": "NordPass",
+              "productName": "NordPass",
+              "productDescription": "NordPass fix for RHEL9 based Operating Systems (like Rocky 9).",
+              "icon": "./assets/icon.png"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.5",
+    "@electron-forge/maker-deb": "^6.0.5",
+    "@electron-forge/maker-rpm": "^6.0.5",
+    "@electron-forge/maker-squirrel": "^6.0.5",
+    "@electron-forge/maker-zip": "^6.0.5",
+    "electron": "^23.2.4"
+  }
+}
